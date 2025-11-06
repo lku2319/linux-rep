@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFFERSIZE	calc.c	4;"	d	file:
+BUFFERSIZE	token.h	4;"	d
+GetNextToken	token.c	/^char * GetNextToken(char * input, struct token * t) {$/;"	f
+Item	stack.h	/^typedef int Item;$/;"	t
+OP_BAD	token.h	16;"	d
+OP_DIVIDE	token.h	11;"	d
+OP_LPAREN	token.h	15;"	d
+OP_MINUS	token.h	9;"	d
+OP_MOD	token.h	13;"	d
+OP_MULTIPLY	token.h	10;"	d
+OP_PLUS	token.h	8;"	d
+OP_POWER	token.h	12;"	d
+OP_RPAREN	token.h	14;"	d
+PG_EVAL_H	eval.h	2;"	d
+PG_TOKEN_H	token.h	2;"	d
+STACKSIZE	token.h	5;"	d
+STACK_H	stack.h	2;"	d
+Stack	stack.h	/^} Stack;$/;"	t	typeref:struct:stack
+TOK_OPERAND	token.h	6;"	d
+TOK_OPERATOR	token.h	7;"	d
+contents	stack.h	/^Item * contents;$/;"	m	struct:stack
+create_stack	stack.c	/^Stack * create_stack(int initial_size)$/;"	f
+evaluate	eval.c	/^double evaluate(char * infix) {$/;"	f
+is_empty	stack.c	/^bool is_empty(Stack * stack)$/;"	f
+is_full	stack.c	/^bool is_full(Stack * stack)$/;"	f
+main	calc.c	/^int main(void) {$/;"	f
+make_empty	stack.c	/^void make_empty(Stack * stack)$/;"	f
+operator	token.h	/^struct operator {$/;"	s
+oplist	token.c	/^struct operator oplist[] = { {'+', OP_PLUS, 1, 1},$/;"	v	typeref:struct:operator
+parsePostfix	eval.c	/^double parsePostfix(char * postfix) {$/;"	f
+peek	stack.c	/^Item peek(Stack *stack)$/;"	f
+pop	stack.c	/^Item pop(Stack * stack)$/;"	f
+precedence_in_stack	token.h	/^int precedence_in_stack;$/;"	m	struct:operator
+precedence_out_stack	token.h	/^int precedence_out_stack;$/;"	m	struct:operator
+push	stack.c	/^void push(Stack * stack, Item i)$/;"	f
+reallocate	stack.c	/^static void reallocate(Stack * stack)$/;"	f	file:
+size	stack.h	/^int size;$/;"	m	struct:stack
+stack	stack.h	/^typedef struct stack {$/;"	s
+stack_overflow	stack.c	/^void stack_overflow(void)$/;"	f
+stack_underflow	stack.c	/^void stack_underflow(void)$/;"	f
+symbol	token.h	/^char symbol;$/;"	m	struct:operator
+toPostfix	eval.c	/^char * toPostfix(char * infix, char * postfix) {$/;"	f
+token	token.h	/^struct token {$/;"	s
+top	stack.h	/^int top;$/;"	m	struct:stack
+type	token.h	/^int type;$/;"	m	struct:token
+value	token.h	/^int value;$/;"	m	struct:operator
+value	token.h	/^int value;$/;"	m	struct:token
